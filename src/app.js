@@ -4,6 +4,7 @@ const hbs = require('hbs');
 
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Check the api usage count for a day, so that the limit does not exceed.
 let apiUseCount = 0;
@@ -104,7 +105,6 @@ app.get('*', (req, res) => {
     });
 });
 
-const port = 3000;
 app.listen(port, ()=> {
     console.log(`Running server at ${port}!`)
 });
