@@ -7,7 +7,7 @@ The app will fetch the lat-long for the address and call another api that fetche
 Maximum no of calls per day is limited!
 
 Made using\
-NodeJS, handlebars.
+NodeJS, hbs templating, CSS, HTML
 
 ### Commands to run
 Check for node and npm availability in PC. 
