@@ -7,7 +7,6 @@ var url = (endPoint, searchText) => `https://api.mapbox.com/geocoding/v5/${endPo
 const getLatLongForLocation = (searchText=st, callback) => {
     searchText = encodeURIComponent(searchText) ;
     request({url:url(endPoint, searchText), json:true}, (error, response) => {
-        console.log(url(endPoint, searchText))
         if (error) {
             callback('Unable to connect to weather service!');
         } else if (response.body.features.length === 0) {
