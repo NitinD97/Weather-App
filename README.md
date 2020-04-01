@@ -12,7 +12,7 @@ NodeJS, handlebars.
 ### Commands to run
 Check for node and npm availability in PC. 
 Open terminal and cd into the app directory.
-> npm install \
+> npm install 
 
 The app will work not work without the forecast app keys.
 The keys will be obtained by signing up for https://www.mapbox.com/ and https://darksky.net/dev \
