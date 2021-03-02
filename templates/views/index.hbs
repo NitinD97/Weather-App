@@ -23,5 +23,53 @@
     </div>
     {{>footer}}
     <script src="js/app.js"></script>
+    <script>
+            window.ymConfig = {
+                bot: 'x1586354441049'
+            };
+            (function() {
+                var w = window,
+                    ic = w.YellowMessenger;
+                if ("function" === typeof ic){
+                    console.log('if');
+                    ic("reattach_activator");
+                    ic("update", ymConfig);
+                }
+                else {
+                    console.log('else');
+                    var d = document,
+                        i = function() {
+                            i.c(arguments)
+                        };
+
+                    function l() {
+                        var e = d.createElement("script");
+                        e.type = "text/javascript", e.async = !0,
+                            e.src = "https://app.yellowmessenger.com/widget/main.js";
+                        var t = d.getElementsByTagName("script")[0];
+                        t.parentNode.insertBefore(e, t)
+                    }
+                    i.q = [], i.c = function(e) {
+                            i.q.push(e)
+                        }, w.YellowMessenger = i,
+                        w.attachEvent ? w.attachEvent("onload", l) : w.addEventListener("load", l, !1)
+                }
+            })();
+            var botVisible = true
+        </script>
+        <script>
+            function displayBot() {
+                console.log(botVisible)
+                if (botVisible === false) {
+                    botVisible = true
+                    window.YellowMessengerPlugin.show()
+                    window.YellowMessengerPlugin.openBot()
+                } else {
+                    botVisible=false
+                    window.YellowMessengerPlugin.closeBot()
+                    window.YellowMessengerPlugin.hide()
+                }
+            }
+        </script>
 </body>
 </html>
